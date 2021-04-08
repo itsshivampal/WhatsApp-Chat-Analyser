@@ -84,7 +84,7 @@ const printActiveUsers = ({ groupedData }) => {
 module.exports = {
   chatAnalyser: async (req, res) => {
     const { joinedUsersData, messagedUsersData } = extractingRelevantData({
-      data: fs.readFileSync("data.txt", "utf-8"),
+      data: fs.readFileSync("assets/data.txt", "utf-8"),
     });
 
     let groupByDateOnMessaged = dataGrouping({
