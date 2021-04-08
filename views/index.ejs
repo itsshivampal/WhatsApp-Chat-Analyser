@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.2/chart.min.js"></script>
+</head>
+
+<body>
+  <h1 style="color: #0277bd; text-align: center; font-size: 50px; margin-bottom: 50px;">WhatsApp Chat Analyzer Tool</h1>
+  <script>
+    const finalData = <%- JSON.stringify(finalData) %>;
+  </script>
+
+  <div style="height: 70vh; width: 60vw; margin-left: 20vw;">
+    <canvas id="myChart" width="100px" height="100px"></canvas>
+  </div>
+
+  <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    ctx.height = 100;
+    var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: Object.keys(finalData),
+        datasets: [
+          {
+            label: '# of Users Messaged',
+            backgroundColor: "#616161",
+            data: Object.keys(finalData).map((date) => finalData[date].messaged),
+          },
+          {
+            label: '# of Users Joined',
+            backgroundColor: "#bdbdbd",
+            data: Object.keys(finalData).map((date) => finalData[date].joined),
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        },
+        maintainAspectRatio: false,
+        responsive: true,
+      }
+    });
+  </script>
+</body>
+
+</html>
