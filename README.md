@@ -56,15 +56,15 @@ Active Users atleast for 4 days (from 9 days) - 33
 
 ```
 {
-  '3/30/21': { joined: 0, messaged: 49 },
-  '3/31/21': { joined: 0, messaged: 46 },
-  '4/1/21': { joined: 5, messaged: 38 },
-  '4/2/21': { joined: 1, messaged: 8 },
-  '4/3/21': { joined: 0, messaged: 33 },
+  '3/30/21': { joined: 0, messaged: 20 },
+  '3/31/21': { joined: 0, messaged: 14 },
+  '4/1/21': { joined: 5, messaged: 18 },
+  '4/2/21': { joined: 1, messaged: 5 },
+  '4/3/21': { joined: 0, messaged: 13 },
   '4/4/21': { joined: 1, messaged: 1 },
-  '4/5/21': { joined: 24, messaged: 3 },
-  '4/6/21': { joined: 20, messaged: 141 },
-  '4/7/21': { joined: 4, messaged: 302 }
+  '4/5/21': { joined: 24, messaged: 2 },
+  '4/6/21': { joined: 20, messaged: 36 },
+  '4/7/21': { joined: 4, messaged: 29 }
 }
 
 ```
