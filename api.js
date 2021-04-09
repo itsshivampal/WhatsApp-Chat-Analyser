@@ -105,10 +105,11 @@ module.exports = {
     listOfDates.forEach((date) => {
       finalData[date] = {
         joined: groupByDateOnJoined[date]
-          ? groupByDateOnJoined[date].length
+          ? new Set(groupByDateOnJoined[date].map(({ number }) => number)).size
           : 0,
         messaged: groupByDateOnMessaged[date]
-          ? groupByDateOnMessaged[date].length
+          ? new Set(groupByDateOnMessaged[date].map(({ number }) => number))
+              .size
           : 0,
       };
     });
